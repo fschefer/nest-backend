@@ -37,4 +37,8 @@ import {
   remove(@Param('id') id: string): Promise<void> {
   return this.productsService.remove(id);
   }
+  @Get()
+findByCriteria(@Body() criteria: any): Promise<Product[]> {
+return this.productsService.findByCriteria(criteria);
+}
   }  
